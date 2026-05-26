@@ -1,5 +1,7 @@
 body {
-  background-color: #030854;
+  background: linear-gradient(to bottom, #021b56, #1e3a8a);
+min-height: 100vh;
+
   color: rgba(240, 240, 242, 0.92);
   font-family: Arial, sans-serif;
 }
@@ -28,15 +30,32 @@ h3 {
 
   transition: 0.3s;
   cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+text-align: center;
 }
 
 .card:hover {
   transform: scale(1.05);
   background-color: #4b5563;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .pokemon-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+}
+input {
+  display: block;
+  margin: 20px auto;
+  padding: 12px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+img {
+  width: 120px;
+  height: 120px;
 }
