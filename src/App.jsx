@@ -4,14 +4,19 @@ import './App.css'
 function App() {
 
   const [pokemon, setPokemon] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
       .then(response => response.json())
       .then(data => {
         setPokemon(data.results)
+        setLoading(false)
       })
   }, [])
+  if (loading) {
+  return <h1>Loading Pokémon...</h1>
+}
 
   return (
     <div>
